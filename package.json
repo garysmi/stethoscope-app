@@ -7,6 +7,13 @@
   "description": "Local Stethoscope app",
   "main": "src/start.js",
   "build": {
+	"publish": [
+      {
+        "provider": "github",
+        "publishAutoUpdate": true,
+        "releaseType": "release"
+      }
+    ],
     "appId": "com.netflix.stethoscope-local",
     "extends": null,
     "productName": "Stethoscope",
@@ -109,12 +116,14 @@
     "lint": "standard --fix src/*.js src/**/*.js resolvers/*.js sources/*.js server.js"
   },
   "dependencies": {
+    "ajv": "^6.7.0",
     "applescript": "^1.0.0",
     "auto-launch": "^5.0.5",
     "body-parser": "^1.18.2",
     "classnames": "^2.2.5",
     "cors": "^2.8.4",
     "cross-env": "^5.2.0",
+    "dmg-builder": "^6.5.3",
     "electron-settings": "^3.1.4",
     "electron-updater": "3.0.3",
     "es6-promisify": "^6.0.0",
@@ -156,7 +165,7 @@
     "enzyme-adapter-react-16": "^1.1.1",
     "mocha": "^5.2.0",
     "react-dev-utils": "5.0.2",
-    "react-scripts": "^1.1.4",
+    "react-scripts": "^1.1.5",
     "spectron": "^4.0.0",
     "standard": "^11.0.1"
   }
