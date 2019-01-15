@@ -14,7 +14,7 @@ osVersion:
     nudge: ">=10.0.10240"
   ubuntu:
     ok: ">=18.4.0"
-    nudge: ">=18.0.2"
+    nudge: ">=16.4.0"
   linux:
     ok: ">=18.4.0"
     nudge: ">=18.0.2"

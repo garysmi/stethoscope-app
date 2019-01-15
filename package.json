@@ -1,6 +1,6 @@
 {
   "name": "Stethoscope",
-  "version": "2.1.0",
+  "version": "2.1.2",
   "private": true,
   "homepage": "./",
   "author": "Netflix",
@@ -21,6 +21,7 @@
       "buildResources": "public"
     },
     "mac": {
+	  "target": "tar.gz",
       "category": "public.app-category.utilities",
       "extraResources": [
         "bin/osqueryd_darwin"
@@ -69,7 +70,7 @@
       "target": "AppImage",
       "category": "System",
       "extraResources": [
-        "bin/osqueryi_linux"
+        "bin/osqueryd_linux"
       ],
       "files": [
         "practices/*",
@@ -106,7 +107,7 @@
     "electron": "cross-env NODE_ENV=development electron .",
     "electron:start": "node src/start-react",
     "react:start": "react-scripts start",
-    "build": "rm -r dist/ ; react-scripts build && electron-builder -mwl",
+    "build": "rm -r dist/ ; react-scripts build && electron-builder -mwl -p always",
     "postinstall": "electron-builder install-app-deps",
     "build:react": "react-scripts build",
     "build:mac": "rm -r dist/; react-scripts build && ELECTRON_BUILDER_COMPRESSION_LEVEL=9 electron-builder -m && npm run test:spectron",
