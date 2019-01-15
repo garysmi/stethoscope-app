@@ -1,6 +1,6 @@
 {
   "name": "Stethoscope",
-  "version": "2.1.2",
+  "version": "2.1.3",
   "private": true,
   "homepage": "./",
   "author": "Netflix",
@@ -11,7 +11,7 @@
       {
         "provider": "github",
         "publishAutoUpdate": true,
-        "releaseType": "release"
+        "releaseType": "draft"
       }
     ],
     "appId": "com.netflix.stethoscope-local",
