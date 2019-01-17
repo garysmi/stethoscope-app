@@ -207,6 +207,11 @@ const Device = {
         return securityToDeviceStatus(status)
       },
 
+      async antiVirus () {
+        const status = await Security.antiVirus(root, args, context)
+        return securityToDeviceStatus(status)
+      },
+
       async publicFirewall () {
         const status = await Security.publicFirewall(root, args, context)
         return securityToDeviceStatus(status)

@@ -12,15 +12,13 @@ osVersion:
   awsWorkspace:
     ok: ">=10.0.14393"
     nudge: ">=10.0.10240"
-  ubuntu:
-    ok: ">=18.4.0"
-    nudge: ">=16.4.0"
   linux:
-    ok: ">=18.4.0"
-    nudge: ">=18.0.2"
+    ok: ">=16.4.0"
+    nudge: ">=14.0.4"
 firewall: ALWAYS
 diskEncryption: ALWAYS
 automaticUpdates: ALWAYS
 screenLock: IF_SUPPORTED
 screenIdle: "<=120"
 remoteLogin: NEVER
+antiVirus: ALWAYS

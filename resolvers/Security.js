@@ -67,6 +67,15 @@ const Security = {
     return UNSUPPORTED
   },
 
+  async antiVirus (root, args, context) {
+    const os = PlatformResolvers[context.platform]
+    if (os.antiVirus) {
+      return os.antiVirus(root, args, context)
+    }
+
+    return UNSUPPORTED
+  },
+
   async diskEncryption (root, args, context) {
     const os = PlatformResolvers[context.platform]
     if (os.diskEncryption) {

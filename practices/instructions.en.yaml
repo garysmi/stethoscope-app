@@ -83,6 +83,26 @@ practices:
         1. Click Apply.
         1. Click OK.
 
+  antiVirus:
+    title: >
+      {{#if passing}}
+        Anti Virus software is installed
+      {{else}}
+        Anti Virus should be installed
+      {{/if}}
+    description: >
+      Anti virus software protect your machine against malicious software and viruses 
+    directions:
+      darwin: |
+        1. Contact IT for information on installing Anti Virus of Mac.
+        
+      win32: |
+        1. Ensure Windows Defender is enabled and Upto date.
+        
+      linux: |
+        1. Open a terminal.
+        1. Do a thing to install some anti virus.
+        
   diskEncryption:
     title: >
       {{#if passing}}

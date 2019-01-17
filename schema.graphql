@@ -66,6 +66,8 @@ type SecurityInfo {
   screenIdle: FeatureState
   # remote login setting
   remoteLogin: FeatureState
+  # antiVirus  setting
+  antiVirus: FeatureState
   # whether applications auto update
   automaticAppUpdates: FeatureState
   # whether automatic security updates are enabled
@@ -116,6 +118,8 @@ input DevicePolicy {
   screenIdle: NumericRange
   # remote login status
   remoteLogin: RequirementOption
+  # antiVirus status
+  antiVirus: RequirementOption
   # require applications to be installed
   requiredApplications: [AppRequirement]
   # ban applications from being installed on user's machine
@@ -162,6 +166,8 @@ type PolicyResult {
   screenIdle: FeatureState
   # remote login setting
   remoteLogin: FeatureState
+  # antiVirus setting
+  antiVirus: FeatureState
   # whether or not all requiredApplications are installed
   requiredApplications: [ApplicationFeatureState]
   # whether or not any bannedApplications are installed
@@ -180,6 +186,7 @@ type Security {
   screenLock(requirement: RequirementOption!): Boolean!
   screenIdle(requirement: NumericRange!): Boolean!
   remoteLogin(requirement: RequirementOption!): Boolean!
+  antiVirus(requirement: RequirementOption!): Boolean!
   requiredApplications(requirement: RequirementOption!): [Boolean!]!
   bannedApplications(requirement: RequirementOption!): [Boolean!]!
   suggestedApplications(requirement: RequirementOption!): [Boolean!]!

@@ -66,6 +66,7 @@ export default class Stethoscope {
           automaticUpdates
           remoteLogin
           stethoscopeVersion
+          antiVirus
 
           requiredApplications {
             name
@@ -113,6 +114,7 @@ export default class Stethoscope {
           screenLock
           screenIdle
           remoteLogin
+          antiVirus
           automaticAppUpdates
           automaticSecurityUpdates
           automaticOsUpdates

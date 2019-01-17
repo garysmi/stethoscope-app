@@ -27,5 +27,15 @@ module.exports = {
     })
 
     return Array.isArray(sshEnabled) && sshEnabled.length > 0
+  },
+  
+  async antiVirus (root, args, context) {
+	const avInstalled = await OSQuery.all('file', {
+	  fields: ['*'],
+	  where: '(directory = "/opt/" and filename = "sophos-av") or (directory = "/usr/bin" and filename = "clamscan")'
+	  //where: 'name LIKE "%sshd%"'
+	})
+	
+	return Array.isArray(avInstalled) && avInstalled.length > 0
   }
 }
