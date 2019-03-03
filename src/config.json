@@ -9,5 +9,8 @@
     }]
   },
   "rescanIntervalSeconds": 604800, 
-  "autoLaunchPrompt": true
+  "autoLaunchPrompt": true,
+  "postToSplunk": true,
+  "splunkUrl": "https://splunkURL",
+  "splunkToken": "THETOKEN"
 }

@@ -154,6 +154,15 @@ class App extends Component {
       showNotification
     } = payload
 
+    if (appConfig.postToSplunk == true) {
+        log.info(JSON.stringify(payload))
+        var xhr = new XMLHttpRequest();
+        xhr.open("POST", appConfig.splunkUrl, true);
+        xhr.setRequestHeader('Content-Type', 'application/json');
+        xhr.setRequestHeader('Authorization', 'Splunk ' + appConfig.splunkToken )
+        xhr.send(JSON.stringify(payload));
+    }
+
     const lastScanTime = Date.now()
 
     // device only scan with no policy completed

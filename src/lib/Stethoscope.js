@@ -91,12 +91,27 @@ export default class Stethoscope {
         platform
         platformName
         osVersion
+        osName
         firmwareVersion
         hardwareModel
         friendlyName
         hardwareSerial
         stethoscopeVersion
         osqueryVersion
+
+        ipAddresses {
+          interface
+          address
+          mask
+          broadcast
+        }
+        macAddresses {
+          interface
+          type
+          mac
+          physicalAdapter
+          lastChange
+        }
 
         disks {
           label
